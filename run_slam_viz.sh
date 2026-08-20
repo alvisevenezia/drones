@@ -153,4 +153,4 @@ python3 "$D/frontier_explore.py" --ros-args -p use_sim_time:=true >/tmp/frontier
 echo "==> [8] PX4 SITL + Gazebo (headless) — console pxh> ci-dessous"
 echo "        Tape :   commander arm -f    puis    commander takeoff"
 echo ""
-cd "$HOME/PX4-Autopilot" && PX4_GZ_WORLD=tugbot_depot HEADLESS=1 make px4_sitl gz_x500_depth
+cd "$P  X4_HOME" && PX4_GZ_WORLD=tugbot_depot HEADLESS=1 make px4_sitl gz_x500_depth
