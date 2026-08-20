@@ -43,6 +43,7 @@ PIDS=()
 # ---------------------------------------------------------------------
 
 source /opt/ros/jazzy/setup.bash
+source "$HOME/ros2_ws/install/setup.bash"
 
 if [ -f "$HOME/ros2_ws/install/setup.bash" ]; then
     source "$HOME/ros2_ws/install/setup.bash"
