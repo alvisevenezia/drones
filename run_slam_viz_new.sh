@@ -15,10 +15,12 @@
 #  10. SLAM ToF
 #  11. RViz / dashboard
 #  12. Exploration / évaluation
+#  13. Console PX4 interactive
 #
 # Gazebo est visible par défaut.
-# Pour du headless :
-#   HEADLESS=1 ./run_slam_viz.sh
+#
+# Pour headless :
+#   HEADLESS=1 ./run_slam_viz_new.sh
 #
 # =====================================================================
 
@@ -38,12 +40,14 @@ HEADLESS="${HEADLESS:-0}"
 
 PIDS=()
 
+# FIFO utilisée pour donner stdin à PX4
+PX4_STDIN_FIFO="/tmp/px4_stdin_$$"
+
 # ---------------------------------------------------------------------
 # ROS
 # ---------------------------------------------------------------------
 
 source /opt/ros/jazzy/setup.bash
-source "$HOME/ros2_ws/install/setup.bash"
 
 if [ -f "$HOME/ros2_ws/install/setup.bash" ]; then
     source "$HOME/ros2_ws/install/setup.bash"
@@ -57,6 +61,19 @@ export ROS_DOMAIN_ID="${ROS_DOMAIN_ID:-0}"
 export GZ_VERSION="${GZ_VERSION:-harmonic}"
 
 # ---------------------------------------------------------------------
+# GUI / OpenGL
+#
+# Le portable n'a pas besoin de NVIDIA.
+# On force Mesa llvmpipe pour RViz/Gazebo.
+# ---------------------------------------------------------------------
+
+if [ "$HEADLESS" != "1" ]; then
+    export QT_X11_NO_MITSHM=1
+    export LIBGL_ALWAYS_SOFTWARE=1
+    export MESA_LOADER_DRIVER_OVERRIDE=llvmpipe
+fi
+
+# ---------------------------------------------------------------------
 # Cleanup
 # ---------------------------------------------------------------------
 
@@ -68,6 +85,9 @@ cleanup() {
     echo " Arrêt de la simulation"
     echo "============================================================"
 
+    # Fermer proprement le FIFO
+    rm -f "$PX4_STDIN_FIFO" 2>/dev/null || true
+
     # Arrêt propre des processus que NOUS avons lancés
     for pid in "${PIDS[@]:-}"; do
         if kill -0 "$pid" 2>/dev/null; then
@@ -75,7 +95,6 @@ cleanup() {
         fi
     done
 
-    # Petite attente pour laisser mourir les processus
     sleep 1
 
     # Nettoyage de sécurité
@@ -85,6 +104,7 @@ cleanup() {
     pkill -9 -x px4 2>/dev/null || true
 
     echo "Simulation arrêtée."
+
     exit "$code"
 }
 
@@ -119,28 +139,6 @@ wait_for_topic() {
     done
 }
 
-wait_for_process() {
-    local pid="$1"
-    local name="$2"
-    local timeout="${3:-30}"
-
-    local start
-    start=$(date +%s)
-
-    while kill -0 "$pid" 2>/dev/null; do
-
-        if (( $(date +%s) - start >= timeout )); then
-            echo "    WARNING : $name tourne toujours après ${timeout}s"
-            return 0
-        fi
-
-        sleep 1
-    done
-
-    echo "    ERROR : $name s'est arrêté."
-    return 1
-}
-
 # =====================================================================
 # 0 — Vérifications
 # =====================================================================
@@ -170,13 +168,18 @@ if ! command -v MicroXRCEAgent >/dev/null 2>&1; then
     exit 1
 fi
 
-# Vérification du monde
 WORLD_FILE="$PX4_HOME/Tools/simulation/gz/worlds/${WORLD}.sdf"
 
 if [ ! -f "$WORLD_FILE" ]; then
     echo "ERROR : monde Gazebo introuvable :"
     echo "        $WORLD_FILE"
     exit 1
+fi
+
+# Vérification dashboard
+if ! ros2 pkg prefix dual_rviz_jazzy >/dev/null 2>&1; then
+    echo "WARNING : dual_rviz_jazzy n'est pas disponible."
+    echo "         Vérifie que $D/install/setup.bash existe."
 fi
 
 # =====================================================================
@@ -218,35 +221,46 @@ echo "    Model : $MODEL"
 echo "    World : $WORLD"
 
 # ---------------------------------------------------------------------
+# FIFO pour permettre à la console PX4 d'être interactive à la fin.
+# ---------------------------------------------------------------------
+
+rm -f "$PX4_STDIN_FIFO"
+mkfifo "$PX4_STDIN_FIFO"
+
+# ---------------------------------------------------------------------
 # Important :
 #
-# On utilise directement la cible déjà compilée.
+# On ne branche PAS directement stdin du terminal sur PX4 maintenant,
+# car nous devons continuer le script.
 #
-# Si HEADLESS=1 :
-#   Gazebo serveur uniquement.
-#
-# Sinon :
-#   Gazebo + GUI.
+# PX4 lit depuis le FIFO.
+# À la fin, on branche le clavier sur ce FIFO.
 # ---------------------------------------------------------------------
 
 if [ "$HEADLESS" = "1" ]; then
 
     echo "    Mode : HEADLESS"
 
-    PX4_GZ_WORLD="$WORLD" \
-    PX4_SIM_MODEL="$MODEL" \
-    HEADLESS=1 \
-    make px4_sitl gz_x500_depth \
-        >/tmp/px4.log 2>&1 &
+    (
+        PX4_GZ_WORLD="$WORLD" \
+        PX4_SIM_MODEL="$MODEL" \
+        HEADLESS=1 \
+        make px4_sitl gz_x500_depth \
+            < "$PX4_STDIN_FIFO" \
+            2>&1
+    ) > /tmp/px4.log &
 
 else
 
     echo "    Mode : GUI"
 
-    PX4_GZ_WORLD="$WORLD" \
-    PX4_SIM_MODEL="$MODEL" \
-    make px4_sitl gz_x500_depth \
-        >/tmp/px4.log 2>&1 &
+    (
+        PX4_GZ_WORLD="$WORLD" \
+        PX4_SIM_MODEL="$MODEL" \
+        make px4_sitl gz_x500_depth \
+            < "$PX4_STDIN_FIFO" \
+            2>&1
+    ) > /tmp/px4.log &
 
 fi
 
@@ -256,13 +270,18 @@ PIDS+=("$PX4_PID")
 echo "    PX4 PID : $PX4_PID"
 
 # ---------------------------------------------------------------------
-# On affiche les logs PX4 dans le terminal.
+# Garder un writer ouvert sur le FIFO.
+#
+# Sans cela, le processus PX4 peut recevoir EOF.
 # ---------------------------------------------------------------------
 
-(
-    tail -f /tmp/px4.log
-) &
+exec 9>"$PX4_STDIN_FIFO"
 
+# ---------------------------------------------------------------------
+# Affichage des logs PX4 pendant le démarrage.
+# ---------------------------------------------------------------------
+
+tail -f /tmp/px4.log &
 LOG_PID=$!
 PIDS+=("$LOG_PID")
 
@@ -279,7 +298,6 @@ echo "    Attente du démarrage de Gazebo..."
 
 sleep 5
 
-# Vérifie que Gazebo existe
 for i in {1..30}; do
 
     if pgrep -f '[g]z sim' >/dev/null 2>&1; then
@@ -312,10 +330,8 @@ echo "============================================================"
 echo " [4] Attente des topics ROS"
 echo "============================================================"
 
-# /clock doit normalement arriver dès que Gazebo tourne.
 wait_for_topic "/clock" 30 || true
 
-# On attend un peu que uXRCE-DDS initialise le client PX4.
 sleep 3
 
 echo ""
@@ -418,7 +434,7 @@ PIDS+=($!)
 sleep 2
 
 # =====================================================================
-# 9 — Nettoyage / densification ToF
+# 9 — Densification ToF
 # =====================================================================
 
 echo ""
@@ -557,14 +573,43 @@ echo "============================================================"
 echo " [14] Dashboard RViz"
 echo "============================================================"
 
-ros2 run dual_rviz_jazzy dual_rviz \
-    --ros-args \
-    -p use_sim_time:=true \
-    >/tmp/slam_dashboard.log 2>&1 &
+if ros2 pkg prefix dual_rviz_jazzy >/dev/null 2>&1; then
 
-PIDS+=($!)
+    echo "    dual_rviz_jazzy trouvé."
 
-sleep 3
+    if [ "$HEADLESS" = "1" ]; then
+
+        echo "    Dashboard désactivé en mode HEADLESS."
+
+    else
+
+        QT_X11_NO_MITSHM=1 \
+        LIBGL_ALWAYS_SOFTWARE=1 \
+        MESA_LOADER_DRIVER_OVERRIDE=llvmpipe \
+        ros2 run dual_rviz_jazzy dual_rviz \
+            --ros-args \
+            -p use_sim_time:=true \
+            >/tmp/slam_dashboard.log 2>&1 &
+
+        PIDS+=($!)
+
+        echo "    Dashboard RViz démarré."
+        echo "    OpenGL : llvmpipe (software rendering)"
+
+    fi
+
+else
+
+    echo "    WARNING : package dual_rviz_jazzy introuvable."
+    echo "    Dashboard non démarré."
+    echo ""
+    echo "    Pour reconstruire :"
+    echo "      cd $D"
+    echo "      source /opt/ros/jazzy/setup.bash"
+    echo "      colcon build --symlink-install --packages-select dual_rviz_jazzy"
+    echo "      source install/setup.bash"
+
+fi
 
 # =====================================================================
 # 15 — Evaluation drift
@@ -599,30 +644,19 @@ python3 "$D/frontier_explore.py" \
 PIDS+=($!)
 
 # =====================================================================
-# 17 — Patrol OFFBOARD — actuellement désactivé
-# =====================================================================
-
-# echo "==> [17] Patrol OFFBOARD"
-#
-# python3 "$D/patrol.py" \
-#     --ros-args \
-#     -p use_sim_time:=true \
-#     >/tmp/patrol.log 2>&1 &
-#
-# PIDS+=($!)
-
-# =====================================================================
-# FIN
+# FIN AUTOMATIQUE
 # =====================================================================
 
 echo ""
 echo "============================================================"
 echo " SIMULATION PRÊTE"
 echo "============================================================"
+
 echo ""
 echo "PX4 :"
 echo "  commander arm -f"
 echo "  commander takeoff"
+
 echo ""
 echo "Logs :"
 echo "  /tmp/px4.log"
@@ -633,20 +667,75 @@ echo "  /tmp/rtabmap.log"
 echo "  /tmp/slam_vl53.log"
 echo "  /tmp/slam_dashboard.log"
 echo "  /tmp/frontier.log"
+
 echo ""
 echo "Topics :"
 ros2 topic list | sort
+
+# =====================================================================
+# 17 — CONSOLE PX4 INTERACTIVE
+# =====================================================================
+
 echo ""
 echo "============================================================"
-echo " Console PX4 :"
+echo " Console PX4"
+echo "============================================================"
+echo ""
+echo "La simulation est maintenant interactive."
+echo "Tu peux utiliser :"
+echo ""
+echo "  commander arm -f"
+echo "  commander takeoff"
+echo ""
+echo "Ctrl+C arrête toute la simulation."
+echo ""
 echo "============================================================"
 echo ""
 
 # ---------------------------------------------------------------------
-# On attend PX4.
+# Stopper le tail qui affichait les logs de démarrage.
+# ---------------------------------------------------------------------
+
+kill "$LOG_PID" 2>/dev/null || true
+
+# ---------------------------------------------------------------------
+# Console interactive :
 #
-# Le processus make/px4 est lancé en arrière-plan pour pouvoir démarrer
-# tous les composants ROS après que Gazebo soit disponible.
+# stdin du terminal -> FIFO -> PX4
+#
+# stdout/stderr PX4 -> /tmp/px4.log
+# et on l'affiche ici en direct.
+#
 # ---------------------------------------------------------------------
 
-wait "$PX4_PID"
+tail -f /tmp/px4.log &
+PX4_TAIL_PID=$!
+
+PIDS+=("$PX4_TAIL_PID")
+
+# ---------------------------------------------------------------------
+# Lire les commandes utilisateur et les envoyer à PX4.
+#
+# On utilise read au lieu de cat pour conserver le comportement
+# interactif du terminal.
+# ---------------------------------------------------------------------
+
+while true; do
+
+    if ! kill -0 "$PX4_PID" 2>/dev/null; then
+        echo ""
+        echo "PX4 s'est arrêté."
+        break
+    fi
+
+    IFS= read -r line || break
+
+    printf '%s\n' "$line" >&9
+
+done
+
+# ---------------------------------------------------------------------
+# Attendre PX4
+# ---------------------------------------------------------------------
+
+wait "$PX4_PID" 2>/dev/null || true
