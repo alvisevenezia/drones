@@ -1,2 +1,0 @@
-[console_scripts]
-keyboard_teleop = px4_keyboard_teleop.keyboard_teleop:main

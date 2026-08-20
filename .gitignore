@@ -1,1 +1,2 @@
-./build/
+/build/*
+drift_eval.py
