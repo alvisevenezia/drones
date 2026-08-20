@@ -1,0 +1,11 @@
+[0.011s] Invoking command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --build /home/antoine/Documents/drones/build/dual_rviz_jazzy -- -j8 -l8
+[0.089s] [ 50%] [32mBuilding CXX object CMakeFiles/dual_rviz.dir/src/main.cpp.o[0m
+[0.732s] In file included from [01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:37[m[K:
+[0.732s] [01m[K/opt/ros/jazzy/include/rtabmap_rviz_plugins/InfoDisplay.h:42:10:[m[K [01;31m[Kfatal error: [m[Krtabmap/core/Transform.h: No such file or directory
+[0.732s]    42 | #include [01;31m[K<rtabmap/core/Transform.h>[m[K
+[0.732s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.733s] compilation terminated.
+[0.744s] gmake[2]: *** [CMakeFiles/dual_rviz.dir/build.make:76: CMakeFiles/dual_rviz.dir/src/main.cpp.o] Error 1
+[0.745s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dual_rviz.dir/all] Error 2
+[0.745s] gmake: *** [Makefile:146: all] Error 2
+[0.747s] Invoked command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --build /home/antoine/Documents/drones/build/dual_rviz_jazzy -- -j8 -l8

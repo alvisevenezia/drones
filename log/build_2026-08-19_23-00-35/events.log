@@ -1,0 +1,219 @@
+[0.000000] (-) TimerEvent: {}
+[0.000414] (-) JobUnselected: {'identifier': 'px4_keyboard_teleop'}
+[0.000566] (dual_rviz_jazzy) JobQueued: {'identifier': 'dual_rviz_jazzy', 'dependencies': OrderedDict()}
+[0.000586] (dual_rviz_jazzy) JobStarted: {'identifier': 'dual_rviz_jazzy'}
+[0.009920] (dual_rviz_jazzy) JobProgress: {'identifier': 'dual_rviz_jazzy', 'progress': 'cmake'}
+[0.010969] (dual_rviz_jazzy) JobProgress: {'identifier': 'dual_rviz_jazzy', 'progress': 'build'}
+[0.011864] (dual_rviz_jazzy) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/antoine/Documents/drones/build/dual_rviz_jazzy', '--', '-j8', '-l8'], 'cwd': '/home/antoine/Documents/drones/build/dual_rviz_jazzy', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'RSYNC_PROXY': 'localhost:1080', 'HTTPS_PROXY': 'http://localhost:3128', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'no_proxy': 'localhost,127.0.0.1,::1,*.local,.local,169.254.0.0/16,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16', 'AI_AGENT': 'github_copilot_vscode_agent', 'LANGUAGE': 'en_US', 'GIT_SSH_COMMAND': "ssh -o ProxyCommand='socat - PROXY:localhost:%h:%p,proxyport=3128'", 'USER': 'antoine', 'SANDBOX_RUNTIME': '1', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'CLAUDE_CODE_HOST_SOCKS_PROXY_PORT': '40947', 'XDG_SEAT': 'seat0', 'GIT_EDITOR': ':', 'all_proxy': 'socks5h://localhost:1080', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'DOCKER_HTTPS_PROXY': 'http://localhost:3128', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/antoine/ros2_ws/install/px4_msgs/lib:/home/antoine/ros2_ws/install/fast_lio/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'COPILOT_AGENT': '1', 'HOME': '/home/antoine', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/antoine/.vscode/tmp/tmp_vscode_1', 'TERM_PROGRAM_VERSION': '1.132.1', 'DESKTOP_SESSION': 'cinnamon', 'NO_PROXY': 'localhost,127.0.0.1,::1,*.local,.local,169.254.0.0/16,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16', 'NVM_BIN': '/home/antoine/.nvm/versions/node/v22.23.0/bin', 'NVM_INC': '/home/antoine/.nvm/versions/node/v22.23.0/include/node', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'CINNAMON_VERSION': '6.6.9', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/antoine/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '197291', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'NVM_DIR': '/home/antoine/.nvm', 'TMPDIR': '/home/antoine/.vscode/tmp/tmp_vscode_1', 'https_proxy': 'http://localhost:3128', 'COLCON_PREFIX_PATH': '/home/antoine/ros2_ws/install', 'CLAUDE_CODE_HOST_HTTP_PROXY_PORT': '46671', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'antoine', 'ALL_PROXY': 'socks5h://localhost:1080', 'http_proxy': 'http://localhost:3128', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'CLAUDE_CODE_SSE_PORT': '39708', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c1', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'grpc_proxy': 'socks5h://localhost:1080', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/antoine/.nvm/versions/node/v22.23.0/bin:/home/antoine/.local/bin:/home/antoine/Documents/flutter/bin:/usr/local/android-studio/bin:/home/antoine/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/antoine/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/antoine/Documents/flutter/bin:/home/antoine/.cargo/bin:/home/antoine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/antoine/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts:/usr/share/code/resources/app/node_modules.asar.unpacked/@vscode/ripgrep-universal/bin/linux-x64', 'SESSION_MANAGER': 'local/antoine-HP-EliteBook-850-G8-Notebook-PC:@/tmp/.ICE-unix/1317,unix/antoine-HP-EliteBook-850-G8-Notebook-PC:/tmp/.ICE-unix/1317', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'LC_ADDRESS': 'fr_FR.UTF-8', 'ftp_proxy': 'socks5h://localhost:1080', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/antoine/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e6491509b46634f2.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'PYTHONSTARTUP': '/home/antoine/.config/Code/User/workspaceStorage/b9fd2e1ac2b136ccbf70ca0254a2a7eb/ms-python.python/pythonrc.py', 'LC_TELEPHONE': 'fr_FR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/antoine/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-4b5cc6e178.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/antoine', 'AMENT_PREFIX_PATH': '/home/antoine/ros2_ws/install/ros_tcp_endpoint:/home/antoine/ros2_ws/install/px4_msgs:/home/antoine/ros2_ws/install/fast_lio:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'LC_NAME': 'fr_FR.UTF-8', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'GDMSESSION': 'cinnamon', 'CLOUDSDK_PROXY_TYPE': 'https', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'fr_FR.UTF-8', 'CLOUDSDK_PROXY_ADDRESS': 'localhost', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'fr_FR.UTF-8', 'CLOUDSDK_PROXY_PORT': '3128', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'ibus', 'XDG_VTNR': '7', 'PWD': '/home/antoine/Documents/drones/build/dual_rviz_jazzy', 'CLAUDE_TMPDIR': '/home/antoine/.vscode/tmp/tmp_vscode_1', 'GIT_MERGE_AUTOEDIT': 'no', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'COPILOT_DEBUG_NONCE': '66c2870506227775e6d9d328e20b5665', 'CLUTTER_IM_MODULE': 'ibus', 'FTP_PROXY': 'socks5h://localhost:1080', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/home/antoine/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/antoine/ros2_ws/install/ros_tcp_endpoint/lib/python3.12/site-packages:/home/antoine/ros2_ws/install/px4_msgs/lib/python3.12/site-packages:/home/antoine/ros2_ws/install/fast_lio/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://localhost:3128', 'LC_NUMERIC': 'fr_FR.UTF-8', 'LC_PAPER': 'fr_FR.UTF-8', 'COLCON': '1', 'QT_IM_MODULES': 'wayland;ibus', 'DOCKER_HTTP_PROXY': 'http://localhost:3128', 'CMAKE_PREFIX_PATH': '/home/antoine/ros2_ws/install/px4_msgs:/home/antoine/ros2_ws/install/fast_lio:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy', 'GRPC_PROXY': 'socks5h://localhost:1080'}), 'shell': False}
+[0.056800] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099758] (-) TimerEvent: {}
+[0.200113] (-) TimerEvent: {}
+[0.300642] (-) TimerEvent: {}
+[0.360762] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.395109] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.400740] (-) TimerEvent: {}
+[0.405953] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.421767] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.436994] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500936] (-) TimerEvent: {}
+[0.519201] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.521609] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.601149] (-) TimerEvent: {}
+[0.623243] (dual_rviz_jazzy) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.701267] (-) TimerEvent: {}
+[0.702287] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found rviz_common: 14.1.22 (/opt/ros/jazzy/share/rviz_common/cmake)\n'}
+[0.766903] (dual_rviz_jazzy) StdoutLine: {'line': b"-- Setting OGRE_DIR to: '/opt/ros/jazzy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'\n"}
+[0.768305] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found OGRE\n'}
+[0.768638] (dual_rviz_jazzy) StdoutLine: {'line': b'--   static     : OFF\n'}
+[0.768735] (dual_rviz_jazzy) StdoutLine: {'line': b'--   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume\n'}
+[0.768805] (dual_rviz_jazzy) StdoutLine: {'line': b'--   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI\n'}
+[0.768877] (dual_rviz_jazzy) StdoutLine: {'line': b'--   media      : /opt/ros/jazzy/opt/rviz_ogre_vendor/share/OGRE/Media\n'}
+[0.770597] (dual_rviz_jazzy) StdoutLine: {'line': b'-- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain\n'}
+[0.770838] (dual_rviz_jazzy) StdoutLine: {'line': b'-- OGRE_LIBRARY_DIRS: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib\n'}
+[0.770957] (dual_rviz_jazzy) StdoutLine: {'line': b'-- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI\n'}
+[0.771070] (dual_rviz_jazzy) StdoutLine: {'line': b'-- OGRE_PLUGIN_DIR: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/OGRE\n'}
+[0.771177] (dual_rviz_jazzy) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so\n'}
+[0.771291] (dual_rviz_jazzy) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so\n'}
+[0.771404] (dual_rviz_jazzy) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so\n'}
+[0.771514] (dual_rviz_jazzy) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so\n'}
+[0.801482] (-) TimerEvent: {}
+[0.902130] (-) TimerEvent: {}
+[1.002541] (-) TimerEvent: {}
+[1.102871] (dual_rviz_jazzy) StdoutLine: {'line': b"-- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'\n"}
+[1.103168] (-) TimerEvent: {}
+[1.117878] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found rviz_default_plugins: 14.1.22 (/opt/ros/jazzy/share/rviz_default_plugins/cmake)\n'}
+[1.203367] (-) TimerEvent: {}
+[1.280334] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.1 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[1.281596] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.291533] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Found rtabmap_msgs: 0.22.1 (/opt/ros/jazzy/share/rtabmap_msgs/cmake)\n'}
+[1.303473] (-) TimerEvent: {}
+[1.403797] (-) TimerEvent: {}
+[1.460251] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Configuring done (1.4s)\n'}
+[1.485338] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.491927] (dual_rviz_jazzy) StdoutLine: {'line': b'-- Build files have been written to: /home/antoine/Documents/drones/build/dual_rviz_jazzy\n'}
+[1.503918] (-) TimerEvent: {}
+[1.565631] (dual_rviz_jazzy) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/dual_rviz.dir/src/main.cpp.o\x1b[0m\n'}
+[1.604278] (-) TimerEvent: {}
+[1.704866] (-) TimerEvent: {}
+[1.805232] (-) TimerEvent: {}
+[1.905510] (-) TimerEvent: {}
+[2.005840] (-) TimerEvent: {}
+[2.106131] (-) TimerEvent: {}
+[2.206795] (-) TimerEvent: {}
+[2.307845] (-) TimerEvent: {}
+[2.408540] (-) TimerEvent: {}
+[2.508783] (-) TimerEvent: {}
+[2.609075] (-) TimerEvent: {}
+[2.709366] (-) TimerEvent: {}
+[2.809825] (-) TimerEvent: {}
+[2.910058] (-) TimerEvent: {}
+[3.010471] (-) TimerEvent: {}
+[3.111150] (-) TimerEvent: {}
+[3.211415] (-) TimerEvent: {}
+[3.311941] (-) TimerEvent: {}
+[3.412615] (-) TimerEvent: {}
+[3.512850] (-) TimerEvent: {}
+[3.613411] (-) TimerEvent: {}
+[3.713847] (-) TimerEvent: {}
+[3.814401] (-) TimerEvent: {}
+[3.914782] (-) TimerEvent: {}
+[4.015344] (-) TimerEvent: {}
+[4.115599] (-) TimerEvent: {}
+[4.215857] (-) TimerEvent: {}
+[4.316114] (-) TimerEvent: {}
+[4.416359] (-) TimerEvent: {}
+[4.516610] (-) TimerEvent: {}
+[4.616857] (-) TimerEvent: {}
+[4.717132] (-) TimerEvent: {}
+[4.817664] (-) TimerEvent: {}
+[4.918165] (-) TimerEvent: {}
+[5.018795] (-) TimerEvent: {}
+[5.119377] (-) TimerEvent: {}
+[5.219750] (-) TimerEvent: {}
+[5.320043] (-) TimerEvent: {}
+[5.420299] (-) TimerEvent: {}
+[5.520733] (-) TimerEvent: {}
+[5.621309] (-) TimerEvent: {}
+[5.721706] (-) TimerEvent: {}
+[5.822083] (-) TimerEvent: {}
+[5.922479] (-) TimerEvent: {}
+[6.022985] (-) TimerEvent: {}
+[6.123364] (-) TimerEvent: {}
+[6.223822] (-) TimerEvent: {}
+[6.324447] (-) TimerEvent: {}
+[6.425259] (-) TimerEvent: {}
+[6.525908] (-) TimerEvent: {}
+[6.627223] (-) TimerEvent: {}
+[6.727793] (-) TimerEvent: {}
+[6.828229] (-) TimerEvent: {}
+[6.929550] (-) TimerEvent: {}
+[7.030188] (-) TimerEvent: {}
+[7.130471] (-) TimerEvent: {}
+[7.230982] (-) TimerEvent: {}
+[7.331295] (-) TimerEvent: {}
+[7.431699] (-) TimerEvent: {}
+[7.532150] (-) TimerEvent: {}
+[7.632400] (-) TimerEvent: {}
+[7.732720] (-) TimerEvent: {}
+[7.833128] (-) TimerEvent: {}
+[7.933855] (-) TimerEvent: {}
+[8.034400] (-) TimerEvent: {}
+[8.134865] (-) TimerEvent: {}
+[8.235310] (-) TimerEvent: {}
+[8.335686] (-) TimerEvent: {}
+[8.436030] (-) TimerEvent: {}
+[8.536350] (-) TimerEvent: {}
+[8.601745] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[KT* {anonymous}::\x1b[01;32m\x1b[KaddDisplay\x1b[m\x1b[K(rviz_common::VisualizationManager*, const char*, const char*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.602159] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:249:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[8.602568] (dual_rviz_jazzy) StderrLine: {'line': b'  249 |   return manager->createDisplay<T\x1b[01;31m\x1b[K>\x1b[m\x1b[K(class_name, name, true);\n'}
+[8.602718] (dual_rviz_jazzy) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[8.636461] (-) TimerEvent: {}
+[8.736745] (-) TimerEvent: {}
+[8.837045] (-) TimerEvent: {}
+[8.937373] (-) TimerEvent: {}
+[9.037851] (-) TimerEvent: {}
+[9.138431] (-) TimerEvent: {}
+[9.239205] (-) TimerEvent: {}
+[9.339529] (-) TimerEvent: {}
+[9.439818] (-) TimerEvent: {}
+[9.540202] (-) TimerEvent: {}
+[9.640976] (-) TimerEvent: {}
+[9.742163] (-) TimerEvent: {}
+[9.843233] (-) TimerEvent: {}
+[9.943519] (-) TimerEvent: {}
+[10.044220] (-) TimerEvent: {}
+[10.145106] (-) TimerEvent: {}
+[10.245984] (-) TimerEvent: {}
+[10.346746] (-) TimerEvent: {}
+[10.447355] (-) TimerEvent: {}
+[10.547686] (-) TimerEvent: {}
+[10.647994] (-) TimerEvent: {}
+[10.748269] (-) TimerEvent: {}
+[10.848555] (-) TimerEvent: {}
+[10.948850] (-) TimerEvent: {}
+[11.049105] (-) TimerEvent: {}
+[11.149392] (-) TimerEvent: {}
+[11.249683] (-) TimerEvent: {}
+[11.349989] (-) TimerEvent: {}
+[11.450344] (-) TimerEvent: {}
+[11.550886] (-) TimerEvent: {}
+[11.651504] (-) TimerEvent: {}
+[11.752004] (-) TimerEvent: {}
+[11.852280] (-) TimerEvent: {}
+[11.952584] (-) TimerEvent: {}
+[12.053333] (-) TimerEvent: {}
+[12.154749] (-) TimerEvent: {}
+[12.255115] (-) TimerEvent: {}
+[12.355412] (-) TimerEvent: {}
+[12.456227] (-) TimerEvent: {}
+[12.557438] (-) TimerEvent: {}
+[12.658398] (-) TimerEvent: {}
+[12.758916] (-) TimerEvent: {}
+[12.859973] (-) TimerEvent: {}
+[12.960582] (-) TimerEvent: {}
+[13.061263] (-) TimerEvent: {}
+[13.162093] (-) TimerEvent: {}
+[13.263223] (-) TimerEvent: {}
+[13.363677] (-) TimerEvent: {}
+[13.463919] (-) TimerEvent: {}
+[13.564226] (-) TimerEvent: {}
+[13.664462] (-) TimerEvent: {}
+[13.764742] (-) TimerEvent: {}
+[13.865017] (-) TimerEvent: {}
+[13.965266] (-) TimerEvent: {}
+[14.065547] (-) TimerEvent: {}
+[14.165819] (-) TimerEvent: {}
+[14.266097] (-) TimerEvent: {}
+[14.366395] (-) TimerEvent: {}
+[14.466732] (-) TimerEvent: {}
+[14.567251] (-) TimerEvent: {}
+[14.667876] (-) TimerEvent: {}
+[14.768497] (-) TimerEvent: {}
+[14.868921] (-) TimerEvent: {}
+[14.969238] (-) TimerEvent: {}
+[15.069565] (-) TimerEvent: {}
+[15.169837] (-) TimerEvent: {}
+[15.270296] (-) TimerEvent: {}
+[15.370996] (-) TimerEvent: {}
+[15.471626] (-) TimerEvent: {}
+[15.571894] (-) TimerEvent: {}
+[15.672185] (-) TimerEvent: {}
+[15.772866] (-) TimerEvent: {}
+[15.874022] (-) TimerEvent: {}
+[15.974700] (-) TimerEvent: {}
+[16.075186] (-) TimerEvent: {}
+[16.176367] (-) TimerEvent: {}
+[16.276680] (-) TimerEvent: {}
+[16.377339] (-) TimerEvent: {}
+[16.478271] (-) TimerEvent: {}
+[16.578865] (-) TimerEvent: {}
+[16.679376] (-) TimerEvent: {}
+[16.779734] (-) TimerEvent: {}
+[16.880080] (-) TimerEvent: {}
+[16.955869] (dual_rviz_jazzy) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/dual_rviz.dir/build.make:76: CMakeFiles/dual_rviz.dir/src/main.cpp.o] Error 1\n'}
+[16.956061] (dual_rviz_jazzy) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dual_rviz.dir/all] Error 2\n'}
+[16.956274] (dual_rviz_jazzy) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[16.962357] (dual_rviz_jazzy) CommandEnded: {'returncode': 2}
+[16.973352] (dual_rviz_jazzy) JobEnded: {'identifier': 'dual_rviz_jazzy', 'rc': 2}
+[16.980155] (-) TimerEvent: {}
+[16.984377] (-) EventReactorShutdown: {}

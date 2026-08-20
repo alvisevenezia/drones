@@ -1,0 +1,127 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Global Options:
+    Fixed Frame: odom
+    Frame Rate: 15
+    Background Color: 0; 0; 0
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Plane Cell Count: 40
+      Cell Size: 1
+      Color: 100; 100; 100
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Show Names: true
+      Marker Scale: 1.5
+    - Class: rviz_default_plugins/Marker
+      Name: Drone VIO (bleu)
+      Enabled: true
+      Topic:
+        Value: /vio_marker
+        Reliability Policy: Best Effort
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_default_plugins/Marker
+      Name: Verite PX4 (rouge)
+      Enabled: true
+      Topic:
+        Value: /truth_marker
+        Reliability Policy: Best Effort
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_default_plugins/Image
+      Name: Camera RGB
+      Enabled: true
+      Topic:
+        Value: /camera/rgb/image_raw
+        Reliability Policy: Best Effort
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_default_plugins/Image
+      Name: Camera Depth
+      Enabled: true
+      Topic:
+        Value: /camera/depth/image_raw
+        Reliability Policy: Best Effort
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Carte A - ToF dense 2304 (48x48)
+      Enabled: true
+      Topic:
+        Value: /slam_map_tof
+        Reliability Policy: Best Effort
+        History Policy: Keep Last
+        Depth: 5
+      Style: Points
+      Size (Pixels): 2
+      Color Transformer: AxisColor
+      Axis: Z
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Carte FAST-LIO (cloud_registered)
+      Enabled: true
+      Topic:
+        Value: /cloud_registered
+        Reliability Policy: Best Effort
+        History Policy: Keep Last
+        Depth: 5
+      Style: Points
+      Size (Pixels): 2
+      Decay Time: 1000
+      Color Transformer: AxisColor
+      Axis: Z
+    - Class: rviz_default_plugins/Map
+      Name: Grille 2D exploration
+      Enabled: true
+      Topic:
+        Value: /explore/grid
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+        Depth: 5
+      Color Scheme: map
+      Alpha: 0.7
+    - Class: rviz_default_plugins/Marker
+      Name: Frontieres (jaune)
+      Enabled: true
+      Topic:
+        Value: /explore/frontiers
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_default_plugins/Marker
+      Name: But exploration (magenta)
+      Enabled: true
+      Topic:
+        Value: /explore/goal_marker
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+        Depth: 5
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Distance: 20
+      Pitch: 0.7
+      Yaw: 0.8
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+Window Geometry:
+  Height: 900
+  Width: 1500
+  Camera RGB:
+    collapsed: false
+  Camera Depth:
+    collapsed: false

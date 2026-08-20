@@ -1,0 +1,231 @@
+[0.000000] (-) TimerEvent: {}
+[0.000480] (-) JobUnselected: {'identifier': 'px4_keyboard_teleop'}
+[0.000625] (dual_rviz_jazzy) JobQueued: {'identifier': 'dual_rviz_jazzy', 'dependencies': OrderedDict()}
+[0.001082] (dual_rviz_jazzy) JobStarted: {'identifier': 'dual_rviz_jazzy'}
+[0.012572] (dual_rviz_jazzy) JobProgress: {'identifier': 'dual_rviz_jazzy', 'progress': 'cmake'}
+[0.013363] (dual_rviz_jazzy) JobProgress: {'identifier': 'dual_rviz_jazzy', 'progress': 'build'}
+[0.013999] (dual_rviz_jazzy) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/antoine/Documents/drones/build/dual_rviz_jazzy', '--', '-j8', '-l8'], 'cwd': '/home/antoine/Documents/drones/build/dual_rviz_jazzy', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'RSYNC_PROXY': 'localhost:1080', 'HTTPS_PROXY': 'http://localhost:3128', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'no_proxy': 'localhost,127.0.0.1,::1,*.local,.local,169.254.0.0/16,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16', 'AI_AGENT': 'github_copilot_vscode_agent', 'LANGUAGE': 'en_US', 'GIT_SSH_COMMAND': "ssh -o ProxyCommand='socat - PROXY:localhost:%h:%p,proxyport=3128'", 'USER': 'antoine', 'SANDBOX_RUNTIME': '1', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'CLAUDE_CODE_HOST_SOCKS_PROXY_PORT': '36375', 'XDG_SEAT': 'seat0', 'GIT_EDITOR': ':', 'all_proxy': 'socks5h://localhost:1080', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'DOCKER_HTTPS_PROXY': 'http://localhost:3128', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/antoine/ros2_ws/install/px4_msgs/lib:/home/antoine/ros2_ws/install/fast_lio/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'COPILOT_AGENT': '1', 'HOME': '/home/antoine', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/antoine/.vscode/tmp/tmp_vscode_1', 'TERM_PROGRAM_VERSION': '1.132.1', 'DESKTOP_SESSION': 'cinnamon', 'NO_PROXY': 'localhost,127.0.0.1,::1,*.local,.local,169.254.0.0/16,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16', 'NVM_BIN': '/home/antoine/.nvm/versions/node/v22.23.0/bin', 'NVM_INC': '/home/antoine/.nvm/versions/node/v22.23.0/include/node', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'fr_FR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'CINNAMON_VERSION': '6.6.9', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/antoine/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '197291', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'NVM_DIR': '/home/antoine/.nvm', 'TMPDIR': '/home/antoine/.vscode/tmp/tmp_vscode_1', 'https_proxy': 'http://localhost:3128', 'COLCON_PREFIX_PATH': '/home/antoine/ros2_ws/install', 'CLAUDE_CODE_HOST_HTTP_PROXY_PORT': '38213', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'antoine', 'ALL_PROXY': 'socks5h://localhost:1080', 'http_proxy': 'http://localhost:3128', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'CLAUDE_CODE_SSE_PORT': '39708', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c1', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'grpc_proxy': 'socks5h://localhost:1080', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/antoine/.nvm/versions/node/v22.23.0/bin:/home/antoine/.local/bin:/home/antoine/Documents/flutter/bin:/usr/local/android-studio/bin:/home/antoine/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/antoine/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/antoine/Documents/flutter/bin:/home/antoine/.cargo/bin:/home/antoine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/antoine/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts:/usr/share/code/resources/app/node_modules.asar.unpacked/@vscode/ripgrep-universal/bin/linux-x64', 'SESSION_MANAGER': 'local/antoine-HP-EliteBook-850-G8-Notebook-PC:@/tmp/.ICE-unix/1317,unix/antoine-HP-EliteBook-850-G8-Notebook-PC:/tmp/.ICE-unix/1317', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'LC_ADDRESS': 'fr_FR.UTF-8', 'ftp_proxy': 'socks5h://localhost:1080', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/antoine/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e6491509b46634f2.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'PYTHONSTARTUP': '/home/antoine/.config/Code/User/workspaceStorage/b9fd2e1ac2b136ccbf70ca0254a2a7eb/ms-python.python/pythonrc.py', 'LC_TELEPHONE': 'fr_FR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/antoine/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-4b5cc6e178.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/antoine', 'AMENT_PREFIX_PATH': '/home/antoine/ros2_ws/install/ros_tcp_endpoint:/home/antoine/ros2_ws/install/px4_msgs:/home/antoine/ros2_ws/install/fast_lio:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'LC_NAME': 'fr_FR.UTF-8', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'GDMSESSION': 'cinnamon', 'CLOUDSDK_PROXY_TYPE': 'https', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'fr_FR.UTF-8', 'CLOUDSDK_PROXY_ADDRESS': 'localhost', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'fr_FR.UTF-8', 'CLOUDSDK_PROXY_PORT': '3128', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'ibus', 'XDG_VTNR': '7', 'PWD': '/home/antoine/Documents/drones/build/dual_rviz_jazzy', 'CLAUDE_TMPDIR': '/home/antoine/.vscode/tmp/tmp_vscode_1', 'GIT_MERGE_AUTOEDIT': 'no', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'COPILOT_DEBUG_NONCE': '66c2870506227775e6d9d328e20b5665', 'CLUTTER_IM_MODULE': 'ibus', 'FTP_PROXY': 'socks5h://localhost:1080', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/home/antoine/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/antoine/ros2_ws/install/ros_tcp_endpoint/lib/python3.12/site-packages:/home/antoine/ros2_ws/install/px4_msgs/lib/python3.12/site-packages:/home/antoine/ros2_ws/install/fast_lio/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://localhost:3128', 'LC_NUMERIC': 'fr_FR.UTF-8', 'LC_PAPER': 'fr_FR.UTF-8', 'COLCON': '1', 'QT_IM_MODULES': 'wayland;ibus', 'DOCKER_HTTP_PROXY': 'http://localhost:3128', 'CMAKE_PREFIX_PATH': '/home/antoine/ros2_ws/install/px4_msgs:/home/antoine/ros2_ws/install/fast_lio:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy', 'GRPC_PROXY': 'socks5h://localhost:1080'}), 'shell': False}
+[0.099530] (-) TimerEvent: {}
+[0.131004] (dual_rviz_jazzy) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/dual_rviz.dir/src/main.cpp.o\x1b[0m\n'}
+[0.199692] (-) TimerEvent: {}
+[0.300276] (-) TimerEvent: {}
+[0.400819] (-) TimerEvent: {}
+[0.501098] (-) TimerEvent: {}
+[0.601422] (-) TimerEvent: {}
+[0.701803] (-) TimerEvent: {}
+[0.802278] (-) TimerEvent: {}
+[0.902531] (-) TimerEvent: {}
+[1.002873] (-) TimerEvent: {}
+[1.103227] (-) TimerEvent: {}
+[1.203637] (-) TimerEvent: {}
+[1.304212] (-) TimerEvent: {}
+[1.405296] (-) TimerEvent: {}
+[1.506306] (-) TimerEvent: {}
+[1.607507] (-) TimerEvent: {}
+[1.708112] (-) TimerEvent: {}
+[1.808345] (-) TimerEvent: {}
+[1.908776] (-) TimerEvent: {}
+[2.009588] (-) TimerEvent: {}
+[2.109891] (-) TimerEvent: {}
+[2.210148] (-) TimerEvent: {}
+[2.310428] (-) TimerEvent: {}
+[2.410688] (-) TimerEvent: {}
+[2.510960] (-) TimerEvent: {}
+[2.611331] (-) TimerEvent: {}
+[2.711599] (-) TimerEvent: {}
+[2.811860] (-) TimerEvent: {}
+[2.912131] (-) TimerEvent: {}
+[3.012359] (-) TimerEvent: {}
+[3.112666] (-) TimerEvent: {}
+[3.212891] (-) TimerEvent: {}
+[3.313127] (-) TimerEvent: {}
+[3.413403] (-) TimerEvent: {}
+[3.513721] (-) TimerEvent: {}
+[3.613971] (-) TimerEvent: {}
+[3.714221] (-) TimerEvent: {}
+[3.814459] (-) TimerEvent: {}
+[3.914690] (-) TimerEvent: {}
+[4.014989] (-) TimerEvent: {}
+[4.115243] (-) TimerEvent: {}
+[4.215590] (-) TimerEvent: {}
+[4.315969] (-) TimerEvent: {}
+[4.416451] (-) TimerEvent: {}
+[4.516998] (-) TimerEvent: {}
+[4.617693] (-) TimerEvent: {}
+[4.718005] (-) TimerEvent: {}
+[4.818325] (-) TimerEvent: {}
+[4.918760] (-) TimerEvent: {}
+[5.019063] (-) TimerEvent: {}
+[5.119594] (-) TimerEvent: {}
+[5.220060] (-) TimerEvent: {}
+[5.320683] (-) TimerEvent: {}
+[5.421548] (-) TimerEvent: {}
+[5.521862] (-) TimerEvent: {}
+[5.622617] (-) TimerEvent: {}
+[5.723086] (-) TimerEvent: {}
+[5.823796] (-) TimerEvent: {}
+[5.925135] (-) TimerEvent: {}
+[6.026111] (-) TimerEvent: {}
+[6.126592] (-) TimerEvent: {}
+[6.227723] (-) TimerEvent: {}
+[6.328393] (-) TimerEvent: {}
+[6.428980] (-) TimerEvent: {}
+[6.530101] (-) TimerEvent: {}
+[6.630417] (-) TimerEvent: {}
+[6.731059] (-) TimerEvent: {}
+[6.831945] (-) TimerEvent: {}
+[6.932358] (-) TimerEvent: {}
+[7.032696] (-) TimerEvent: {}
+[7.133310] (-) TimerEvent: {}
+[7.234486] (-) TimerEvent: {}
+[7.334802] (-) TimerEvent: {}
+[7.435087] (-) TimerEvent: {}
+[7.478894] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:814:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[7.479895] (dual_rviz_jazzy) StderrLine: {'line': b'  814 | }\n'}
+[7.480010] (dual_rviz_jazzy) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.480128] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:595:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.480242] (dual_rviz_jazzy) StderrLine: {'line': b'  595 | \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[7.480334] (dual_rviz_jazzy) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[7.487224] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[K{anonymous}::DashboardWindow::\x1b[01;32m\x1b[KDashboardWindow\x1b[m\x1b[K(const std::shared_ptr<rviz_common::ros_integration::RosNodeAbstraction>&, const std::shared_ptr<{anonymous}::DashboardNode>&, QWidget*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.487827] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:601:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kclass \xe2\x80\x98\x1b[01m\x1b[K{anonymous}::DashboardWindow\x1b[m\x1b[K\xe2\x80\x99 does not have any field named \xe2\x80\x98\x1b[01m\x1b[Kdashboard_node_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.487962] (dual_rviz_jazzy) StderrLine: {'line': b'  601 |   : QMainWindow(parent), \x1b[01;31m\x1b[Kdashboard_node_\x1b[m\x1b[K(dashboard_node)\n'}
+[7.488068] (dual_rviz_jazzy) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.498523] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:613:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krgb_card_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.498691] (dual_rviz_jazzy) StderrLine: {'line': b'  613 |     \x1b[01;31m\x1b[Krgb_card_\x1b[m\x1b[K = new ImageCard("Camera RGB", left);\n'}
+[7.498751] (dual_rviz_jazzy) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.515325] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:614:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdepth_card_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.515506] (dual_rviz_jazzy) StderrLine: {'line': b'  614 |     \x1b[01;31m\x1b[Kdepth_card_\x1b[m\x1b[K = new ImageCard("Depth / ToF projection", left);\n'}
+[7.515575] (dual_rviz_jazzy) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.531748] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:615:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstats_card_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KStatsCard\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.531918] (dual_rviz_jazzy) StderrLine: {'line': b'  615 |     \x1b[01;31m\x1b[Kstats_card_\x1b[m\x1b[K = new StatsCard(left);\n'}
+[7.531980] (dual_rviz_jazzy) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.532040] (dual_rviz_jazzy) StderrLine: {'line': b'      |     \x1b[32m\x1b[KStatsCard\x1b[m\x1b[K\n'}
+[7.535193] (-) TimerEvent: {}
+[7.565285] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[7.565502] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:714:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcloud_card_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.565595] (dual_rviz_jazzy) StderrLine: {'line': b'  714 |             \x1b[01;31m\x1b[Kcloud_card_\x1b[m\x1b[K = new RvizCard(\n'}
+[7.565699] (dual_rviz_jazzy) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.565808] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:715:66:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[K{anonymous}::RvizCard::RvizCard(rviz_common::VisualizationManager*&, const char [28], const char [12])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.565880] (dual_rviz_jazzy) StderrLine: {'line': b'  715 |             manager, "rviz_default_plugins/Marker", "Truth drift"\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[7.565974] (dual_rviz_jazzy) StderrLine: {'line': b'      |                                                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.566113] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:551:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[K{anonymous}::RvizCard::\x1b[01;32m\x1b[KRvizCard\x1b[m\x1b[K(const QString&, const QString&, const std::shared_ptr<rviz_common::ros_integration::RosNodeAbstraction>&, SetupFn, QWidget*)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.566213] (dual_rviz_jazzy) StderrLine: {'line': b'  551 |   \x1b[01;36m\x1b[KRvizCard\x1b[m\x1b[K(\n'}
+[7.566363] (dual_rviz_jazzy) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.566429] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:551:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 5 arguments, 3 provided\n'}
+[7.581899] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:716:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktruth\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.582090] (dual_rviz_jazzy) StderrLine: {'line': b'  716 |           setTopic(\x1b[01;31m\x1b[Ktruth\x1b[m\x1b[K, "/truth_marker");\n'}
+[7.582170] (dual_rviz_jazzy) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.597299] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[K{anonymous}::DashboardWindow::\x1b[01;32m\x1b[KDashboardWindow\x1b[m\x1b[K(const std::shared_ptr<rviz_common::ros_integration::RosNodeAbstraction>&, const std::shared_ptr<{anonymous}::DashboardNode>&, QWidget*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.597483] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:731:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktimer_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktimer_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.597560] (dual_rviz_jazzy) StderrLine: {'line': b'  731 |     \x1b[01;31m\x1b[Ktimer_\x1b[m\x1b[K = new QTimer(this);\n'}
+[7.597620] (dual_rviz_jazzy) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.597672] (dual_rviz_jazzy) StderrLine: {'line': b'      |     \x1b[32m\x1b[Ktimer_t\x1b[m\x1b[K\n'}
+[7.597724] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:732:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krefresh\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[K{anonymous}::DashboardWindow\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.597775] (dual_rviz_jazzy) StderrLine: {'line': b'  732 |     connect(timer_, &QTimer::timeout, this, &DashboardWindow::\x1b[01;31m\x1b[Krefresh\x1b[m\x1b[K);\n'}
+[7.597827] (dual_rviz_jazzy) StderrLine: {'line': b'      |                                                               \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.597877] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:735:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[7.597929] (dual_rviz_jazzy) StderrLine: {'line': b'  735 |                 views\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[7.597979] (dual_rviz_jazzy) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.612528] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:737:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcloud_card_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.612689] (dual_rviz_jazzy) StderrLine: {'line': b'  737 |               \x1b[01;31m\x1b[Kcloud_card_\x1b[m\x1b[K,\n'}
+[7.612754] (dual_rviz_jazzy) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.612826] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:738:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[7.612881] (dual_rviz_jazzy) StderrLine: {'line': b'  738 |   \x1b[01;31m\x1b[K}\x1b[m\x1b[K\n'}
+[7.612934] (dual_rviz_jazzy) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.629064] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint {anonymous}::DashboardWindow::\x1b[01;32m\x1b[Kmain\x1b[m\x1b[K(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.629334] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:804:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kviews\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.629404] (dual_rviz_jazzy) StderrLine: {'line': b'  804 |                 \x1b[01;31m\x1b[Kviews\x1b[m\x1b[K);\n'}
+[7.629458] (dual_rviz_jazzy) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.635405] (-) TimerEvent: {}
+[7.642651] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:806:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kexplore_card_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.642877] (dual_rviz_jazzy) StderrLine: {'line': b'  806 |               \x1b[01;31m\x1b[Kexplore_card_\x1b[m\x1b[K,\n'}
+[7.642979] (dual_rviz_jazzy) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.643091] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:808:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[7.643185] (dual_rviz_jazzy) StderrLine: {'line': b'  808 |   executor.cancel()\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[7.643277] (dual_rviz_jazzy) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.643368] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:805:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.643463] (dual_rviz_jazzy) StderrLine: {'line': b'  805 |             views->addTab\x1b[01;36m\x1b[K(\x1b[m\x1b[K\n'}
+[7.643554] (dual_rviz_jazzy) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[7.652472] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:813:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kresult\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.652737] (dual_rviz_jazzy) StderrLine: {'line': b'  813 |   return \x1b[01;31m\x1b[Kresult\x1b[m\x1b[K;\n'}
+[7.652839] (dual_rviz_jazzy) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.652931] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:\x1b[m\x1b[K At global scope:\n'}
+[7.653023] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:814:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id at end of input\n'}
+[7.653117] (dual_rviz_jazzy) StderrLine: {'line': b'  814 | }\n'}
+[7.653210] (dual_rviz_jazzy) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.653301] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:814:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[7.653413] (dual_rviz_jazzy) StderrLine: {'line': b'\x1b[01m\x1b[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:52:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.653513] (dual_rviz_jazzy) StderrLine: {'line': b'   52 | \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[7.653609] (dual_rviz_jazzy) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[7.735679] (-) TimerEvent: {}
+[7.836375] (-) TimerEvent: {}
+[7.936661] (-) TimerEvent: {}
+[8.037243] (-) TimerEvent: {}
+[8.137632] (-) TimerEvent: {}
+[8.238719] (-) TimerEvent: {}
+[8.339869] (-) TimerEvent: {}
+[8.440341] (-) TimerEvent: {}
+[8.541343] (-) TimerEvent: {}
+[8.642651] (-) TimerEvent: {}
+[8.744219] (-) TimerEvent: {}
+[8.845106] (-) TimerEvent: {}
+[8.945760] (-) TimerEvent: {}
+[9.046114] (-) TimerEvent: {}
+[9.146363] (-) TimerEvent: {}
+[9.246711] (-) TimerEvent: {}
+[9.347097] (-) TimerEvent: {}
+[9.447365] (-) TimerEvent: {}
+[9.547651] (-) TimerEvent: {}
+[9.647942] (-) TimerEvent: {}
+[9.748199] (-) TimerEvent: {}
+[9.848461] (-) TimerEvent: {}
+[9.948714] (-) TimerEvent: {}
+[10.049100] (-) TimerEvent: {}
+[10.149601] (-) TimerEvent: {}
+[10.250195] (-) TimerEvent: {}
+[10.350816] (-) TimerEvent: {}
+[10.451153] (-) TimerEvent: {}
+[10.551454] (-) TimerEvent: {}
+[10.651760] (-) TimerEvent: {}
+[10.752035] (-) TimerEvent: {}
+[10.852314] (-) TimerEvent: {}
+[10.952721] (-) TimerEvent: {}
+[11.053257] (-) TimerEvent: {}
+[11.153616] (-) TimerEvent: {}
+[11.254500] (-) TimerEvent: {}
+[11.355697] (-) TimerEvent: {}
+[11.456430] (-) TimerEvent: {}
+[11.556998] (-) TimerEvent: {}
+[11.657427] (-) TimerEvent: {}
+[11.757682] (-) TimerEvent: {}
+[11.857946] (-) TimerEvent: {}
+[11.958208] (-) TimerEvent: {}
+[12.058445] (-) TimerEvent: {}
+[12.158813] (-) TimerEvent: {}
+[12.259319] (-) TimerEvent: {}
+[12.359553] (-) TimerEvent: {}
+[12.459797] (-) TimerEvent: {}
+[12.560056] (-) TimerEvent: {}
+[12.660280] (-) TimerEvent: {}
+[12.760749] (-) TimerEvent: {}
+[12.861373] (-) TimerEvent: {}
+[12.961599] (-) TimerEvent: {}
+[13.061875] (-) TimerEvent: {}
+[13.162218] (-) TimerEvent: {}
+[13.262509] (-) TimerEvent: {}
+[13.362759] (-) TimerEvent: {}
+[13.463040] (-) TimerEvent: {}
+[13.563269] (-) TimerEvent: {}
+[13.663560] (-) TimerEvent: {}
+[13.763919] (-) TimerEvent: {}
+[13.864194] (-) TimerEvent: {}
+[13.964550] (-) TimerEvent: {}
+[14.064900] (-) TimerEvent: {}
+[14.165201] (-) TimerEvent: {}
+[14.265915] (-) TimerEvent: {}
+[14.272691] (dual_rviz_jazzy) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/dual_rviz.dir/build.make:76: CMakeFiles/dual_rviz.dir/src/main.cpp.o] Error 1\n'}
+[14.273295] (dual_rviz_jazzy) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dual_rviz.dir/all] Error 2\n'}
+[14.273718] (dual_rviz_jazzy) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[14.281151] (dual_rviz_jazzy) CommandEnded: {'returncode': 2}
+[14.316616] (dual_rviz_jazzy) JobEnded: {'identifier': 'dual_rviz_jazzy', 'rc': 2}
+[14.327244] (-) EventReactorShutdown: {}

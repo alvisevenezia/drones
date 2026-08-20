@@ -1,0 +1,30 @@
+[0.035s] Invoking command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/Documents/drones/install/px4_keyboard_teleop:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --build /home/antoine/Documents/drones/build/dual_rviz_jazzy -- -j8 -l8
+[0.263s] [ 50%] [32mBuilding CXX object CMakeFiles/dual_rviz.dir/src/main.cpp.o[0m
+[51.614s] [100%] [32m[1mLinking CXX executable dual_rviz[0m
+[61.815s] [100%] Built target dual_rviz
+[61.857s] Invoked command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/Documents/drones/install/px4_keyboard_teleop:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --build /home/antoine/Documents/drones/build/dual_rviz_jazzy -- -j8 -l8
+[61.887s] Invoking command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/Documents/drones/install/px4_keyboard_teleop:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --install /home/antoine/Documents/drones/build/dual_rviz_jazzy
+[61.933s] -- Install configuration: ""
+[61.935s] -- Installing: /home/antoine/Documents/drones/install/dual_rviz_jazzy/lib/dual_rviz_jazzy/dual_rviz
+[61.960s] -- Set non-toolchain portion of runtime path of "/home/antoine/Documents/drones/install/dual_rviz_jazzy/lib/dual_rviz_jazzy/dual_rviz" to ""
+[61.960s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/config
+[61.961s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/config/dashboard_explore.rviz
+[61.962s] -- Installing: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/config/vl53.rviz
+[61.962s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/config/rgbd.rviz
+[61.962s] -- Installing: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/config/dashboard_3d.rviz
+[61.965s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/ament_index/resource_index/package_run_dependencies/dual_rviz_jazzy
+[61.965s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/ament_index/resource_index/parent_prefix_path/dual_rviz_jazzy
+[61.967s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/environment/ament_prefix_path.sh
+[61.971s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/environment/ament_prefix_path.dsv
+[61.971s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/environment/path.sh
+[61.972s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/environment/path.dsv
+[61.972s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/local_setup.bash
+[61.972s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/local_setup.sh
+[61.972s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/local_setup.zsh
+[61.973s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/local_setup.dsv
+[61.973s] -- Installing: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.dsv
+[61.974s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/ament_index/resource_index/packages/dual_rviz_jazzy
+[61.975s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/cmake/dual_rviz_jazzyConfig.cmake
+[61.979s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/cmake/dual_rviz_jazzyConfig-version.cmake
+[61.979s] -- Up-to-date: /home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.xml
+[61.982s] Invoked command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/Documents/drones/install/px4_keyboard_teleop:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --install /home/antoine/Documents/drones/build/dual_rviz_jazzy

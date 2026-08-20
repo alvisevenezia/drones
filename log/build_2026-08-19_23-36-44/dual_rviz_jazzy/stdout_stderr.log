@@ -1,0 +1,12 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/dual_rviz.dir/src/main.cpp.o[0m
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:[m[K In constructor ‘[01m[K{anonymous}::DashboardWindow::[01;32m[KDashboardWindow[m[K(QApplication*, const std::shared_ptr<{anonymous}::DashboardNode>&, QWidget*)[m[K’:
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:583:15:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[K{anonymous}::RvizPane::RvizPane(QApplication*&, const char [28], const QString&, const char [12], QSplitter*&)[m[K’
+  583 |       splitter[01;31m[K)[m[K;
+      |               [01;31m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:472:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[K{anonymous}::RvizPane::[01;32m[KRvizPane[m[K(QApplication*, const std::string&, const QString&, const QString&, const QString&, const QString&, QWidget*)[m[K’
+  472 |   [01;36m[KRvizPane[m[K(
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:472:3:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 5 provided
+gmake[2]: *** [CMakeFiles/dual_rviz.dir/build.make:76: CMakeFiles/dual_rviz.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dual_rviz.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

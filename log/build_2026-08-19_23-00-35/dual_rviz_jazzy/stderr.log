@@ -1,0 +1,7 @@
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:[m[K In function ‘[01m[KT* {anonymous}::[01;32m[KaddDisplay[m[K(rviz_common::VisualizationManager*, const char*, const char*)[m[K’:
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:249:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  249 |   return manager->createDisplay<T[01;31m[K>[m[K(class_name, name, true);
+      |                                  [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/dual_rviz.dir/build.make:76: CMakeFiles/dual_rviz.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dual_rviz.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

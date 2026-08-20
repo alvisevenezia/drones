@@ -1,0 +1,78 @@
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:814:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  814 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:595:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  595 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:[m[K In constructor ‘[01m[K{anonymous}::DashboardWindow::[01;32m[KDashboardWindow[m[K(const std::shared_ptr<rviz_common::ros_integration::RosNodeAbstraction>&, const std::shared_ptr<{anonymous}::DashboardNode>&, QWidget*)[m[K’:
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:601:26:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[K{anonymous}::DashboardWindow[m[K’ does not have any field named ‘[01m[Kdashboard_node_[m[K’
+  601 |   : QMainWindow(parent), [01;31m[Kdashboard_node_[m[K(dashboard_node)
+      |                          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:613:5:[m[K [01;31m[Kerror: [m[K‘[01m[Krgb_card_[m[K’ was not declared in this scope
+  613 |     [01;31m[Krgb_card_[m[K = new ImageCard("Camera RGB", left);
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:614:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdepth_card_[m[K’ was not declared in this scope
+  614 |     [01;31m[Kdepth_card_[m[K = new ImageCard("Depth / ToF projection", left);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:615:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstats_card_[m[K’ was not declared in this scope; did you mean ‘[01m[KStatsCard[m[K’?
+  615 |     [01;31m[Kstats_card_[m[K = new StatsCard(left);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+      |     [32m[KStatsCard[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:[m[K In lambda function:
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:714:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcloud_card_[m[K’ was not declared in this scope
+  714 |             [01;31m[Kcloud_card_[m[K = new RvizCard(
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:715:66:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[K{anonymous}::RvizCard::RvizCard(rviz_common::VisualizationManager*&, const char [28], const char [12])[m[K’
+  715 |             manager, "rviz_default_plugins/Marker", "Truth drift"[01;31m[K)[m[K;
+      |                                                                  [01;31m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:551:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[K{anonymous}::RvizCard::[01;32m[KRvizCard[m[K(const QString&, const QString&, const std::shared_ptr<rviz_common::ros_integration::RosNodeAbstraction>&, SetupFn, QWidget*)[m[K’
+  551 |   [01;36m[KRvizCard[m[K(
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:551:3:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 3 provided
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:716:20:[m[K [01;31m[Kerror: [m[K‘[01m[Ktruth[m[K’ was not declared in this scope
+  716 |           setTopic([01;31m[Ktruth[m[K, "/truth_marker");
+      |                    [01;31m[K^~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:[m[K In constructor ‘[01m[K{anonymous}::DashboardWindow::[01;32m[KDashboardWindow[m[K(const std::shared_ptr<rviz_common::ros_integration::RosNodeAbstraction>&, const std::shared_ptr<{anonymous}::DashboardNode>&, QWidget*)[m[K’:
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:731:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+  731 |     [01;31m[Ktimer_[m[K = new QTimer(this);
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[Ktimer_t[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:732:63:[m[K [01;31m[Kerror: [m[K‘[01m[Krefresh[m[K’ is not a member of ‘[01m[K{anonymous}::DashboardWindow[m[K’
+  732 |     connect(timer_, &QTimer::timeout, this, &DashboardWindow::[01;31m[Krefresh[m[K);
+      |                                                               [01;31m[K^~~~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:735:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+  735 |                 views[01;31m[K)[m[K;
+      |                      [01;31m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:737:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kcloud_card_[m[K’ was not declared in this scope
+  737 |               [01;31m[Kcloud_card_[m[K,
+      |               [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:738:3:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K}[m[K’ token
+  738 |   [01;31m[K}[m[K
+      |   [01;31m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:[m[K In member function ‘[01m[Kint {anonymous}::DashboardWindow::[01;32m[Kmain[m[K(int, char**)[m[K’:
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:804:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kviews[m[K’ was not declared in this scope
+  804 |                 [01;31m[Kviews[m[K);
+      |                 [01;31m[K^~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:806:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kexplore_card_[m[K’ was not declared in this scope
+  806 |               [01;31m[Kexplore_card_[m[K,
+      |               [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:808:20:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  808 |   executor.cancel()[01;31m[K;[m[K
+      |                    [01;31m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:805:26:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+  805 |             views->addTab[01;36m[K([m[K
+      |                          [01;36m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:813:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult[m[K’ was not declared in this scope
+  813 |   return [01;31m[Kresult[m[K;
+      |          [01;31m[K^~~~~~[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:[m[K At global scope:
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:814:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  814 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:814:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:52:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   52 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+gmake[2]: *** [CMakeFiles/dual_rviz.dir/build.make:76: CMakeFiles/dual_rviz.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dual_rviz.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

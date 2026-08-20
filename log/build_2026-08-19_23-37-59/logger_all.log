@@ -1,0 +1,201 @@
+[0.317s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'dual_rviz_jazzy']
+[0.318s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['dual_rviz_jazzy'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x76bd16bf6d20>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x76bd160b4530>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x76bd160b4530>>, mixin_verb=('build',))
+[0.445s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.447s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/antoine/Documents/drones'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'ignore'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'ignore_ament_install'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['colcon_pkg']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'colcon_pkg'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['colcon_meta']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'colcon_meta'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['ros']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'ros'
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['cmake', 'python']
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'cmake'
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'python'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['python_setup_py']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'python_setup_py'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.524s] Level 1:colcon.colcon_core.package_identification:_identify(dual_rviz_jazzy) by extensions ['ignore', 'ignore_ament_install']
+[0.524s] Level 1:colcon.colcon_core.package_identification:_identify(dual_rviz_jazzy) by extension 'ignore'
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(dual_rviz_jazzy) by extension 'ignore_ament_install'
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(dual_rviz_jazzy) by extensions ['colcon_pkg']
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(dual_rviz_jazzy) by extension 'colcon_pkg'
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(dual_rviz_jazzy) by extensions ['colcon_meta']
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(dual_rviz_jazzy) by extension 'colcon_meta'
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(dual_rviz_jazzy) by extensions ['ros']
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(dual_rviz_jazzy) by extension 'ros'
+[0.536s] DEBUG:colcon.colcon_core.package_identification:Package 'dual_rviz_jazzy' with type 'ros.ament_cmake' and name 'dual_rviz_jazzy'
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.540s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.540s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.541s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.541s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.541s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.541s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_keyboard_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_keyboard_teleop) by extension 'ignore'
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_keyboard_teleop) by extension 'ignore_ament_install'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_keyboard_teleop) by extensions ['colcon_pkg']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_keyboard_teleop) by extension 'colcon_pkg'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_keyboard_teleop) by extensions ['colcon_meta']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_keyboard_teleop) by extension 'colcon_meta'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_keyboard_teleop) by extensions ['ros']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_keyboard_teleop) by extension 'ros'
+[0.545s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_keyboard_teleop' with type 'ros.ament_python' and name 'px4_keyboard_teleop'
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extensions ['ignore', 'ignore_ament_install']
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extension 'ignore'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extension 'ignore_ament_install'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extensions ['colcon_pkg']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extension 'colcon_pkg'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extensions ['colcon_meta']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extension 'colcon_meta'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extensions ['ros']
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extension 'ros'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extensions ['cmake', 'python']
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extension 'cmake'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extension 'python'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extensions ['python_setup_py']
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot) by extension 'python_setup_py'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extensions ['ignore', 'ignore_ament_install']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extension 'ignore'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extension 'ignore_ament_install'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extensions ['colcon_pkg']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extension 'colcon_pkg'
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extensions ['colcon_meta']
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extension 'colcon_meta'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extensions ['ros']
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extension 'ros'
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extensions ['cmake', 'python']
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extension 'cmake'
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extension 'python'
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extensions ['python_setup_py']
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(tugbot_depot/thumbnails) by extension 'python_setup_py'
+[0.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.553s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.553s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.610s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'px4_keyboard_teleop' in 'src/px4_keyboard_teleop'
+[0.612s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.613s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.617s] WARNING:colcon.colcon_core.prefix_path.colcon:The path '/home/antoine/ros2_ws/install' in the environment variable COLCON_PREFIX_PATH doesn't exist
+[0.618s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/antoine/ros2_ws/install/ros_tcp_endpoint' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.618s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/antoine/ros2_ws/install/px4_msgs' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.618s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/antoine/ros2_ws/install/fast_lio' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.618s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/antoine/ros2_ws/install/px4_msgs' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.619s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/antoine/ros2_ws/install/fast_lio' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.621s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/antoine/Documents/drones/install
+[0.627s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 346 installed packages in /opt/ros/jazzy
+[0.631s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.778s] Level 5:colcon.colcon_core.verb:set package 'dual_rviz_jazzy' build argument 'cmake_args' from command line to 'None'
+[0.778s] Level 5:colcon.colcon_core.verb:set package 'dual_rviz_jazzy' build argument 'cmake_target' from command line to 'None'
+[0.778s] Level 5:colcon.colcon_core.verb:set package 'dual_rviz_jazzy' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.778s] Level 5:colcon.colcon_core.verb:set package 'dual_rviz_jazzy' build argument 'cmake_clean_cache' from command line to 'False'
+[0.778s] Level 5:colcon.colcon_core.verb:set package 'dual_rviz_jazzy' build argument 'cmake_clean_first' from command line to 'False'
+[0.779s] Level 5:colcon.colcon_core.verb:set package 'dual_rviz_jazzy' build argument 'cmake_force_configure' from command line to 'False'
+[0.779s] Level 5:colcon.colcon_core.verb:set package 'dual_rviz_jazzy' build argument 'ament_cmake_args' from command line to 'None'
+[0.779s] Level 5:colcon.colcon_core.verb:set package 'dual_rviz_jazzy' build argument 'catkin_cmake_args' from command line to 'None'
+[0.779s] Level 5:colcon.colcon_core.verb:set package 'dual_rviz_jazzy' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.779s] DEBUG:colcon.colcon_core.verb:Building package 'dual_rviz_jazzy' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/antoine/Documents/drones/build/dual_rviz_jazzy', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/antoine/Documents/drones/install/dual_rviz_jazzy', 'merge_install': False, 'path': '/home/antoine/Documents/drones/dual_rviz_jazzy', 'symlink_install': False, 'test_result_base': None}
+[0.779s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.792s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.795s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/antoine/Documents/drones/dual_rviz_jazzy' with build type 'ament_cmake'
+[0.796s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/antoine/Documents/drones/dual_rviz_jazzy'
+[0.802s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.803s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.803s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.836s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/Documents/drones/install/px4_keyboard_teleop:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --build /home/antoine/Documents/drones/build/dual_rviz_jazzy -- -j8 -l8
+[72.540s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/Documents/drones/install/px4_keyboard_teleop:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --build /home/antoine/Documents/drones/build/dual_rviz_jazzy -- -j8 -l8
+[72.585s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/Documents/drones/install/px4_keyboard_teleop:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --install /home/antoine/Documents/drones/build/dual_rviz_jazzy
+[72.690s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dual_rviz_jazzy)
+[72.702s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/Documents/drones/install/px4_keyboard_teleop:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --install /home/antoine/Documents/drones/build/dual_rviz_jazzy
+[72.704s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy' for CMake module files
+[72.705s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy' for CMake config files
+[72.705s] Level 1:colcon.colcon_core.shell:create_environment_hook('dual_rviz_jazzy', 'cmake_prefix_path')
+[72.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/hook/cmake_prefix_path.ps1'
+[72.710s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/hook/cmake_prefix_path.dsv'
+[72.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/hook/cmake_prefix_path.sh'
+[72.716s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy/lib'
+[72.716s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy/bin'
+[72.716s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy/lib/pkgconfig/dual_rviz_jazzy.pc'
+[72.717s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy/lib/python3.12/site-packages'
+[72.717s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy/bin'
+[72.718s] INFO:colcon.colcon_core.shell:Creating package script '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.ps1'
+[72.721s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.dsv'
+[72.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.sh'
+[72.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.bash'
+[72.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.zsh'
+[72.732s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/colcon-core/packages/dual_rviz_jazzy)
+[72.736s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dual_rviz_jazzy)
+[72.737s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy' for CMake module files
+[72.739s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy' for CMake config files
+[72.739s] Level 1:colcon.colcon_core.shell:create_environment_hook('dual_rviz_jazzy', 'cmake_prefix_path')
+[72.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/hook/cmake_prefix_path.ps1'
+[72.743s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/hook/cmake_prefix_path.dsv'
+[72.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/hook/cmake_prefix_path.sh'
+[72.749s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy/lib'
+[72.751s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy/bin'
+[72.751s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy/lib/pkgconfig/dual_rviz_jazzy.pc'
+[72.752s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy/lib/python3.12/site-packages'
+[72.753s] Level 1:colcon.colcon_core.environment:checking '/home/antoine/Documents/drones/install/dual_rviz_jazzy/bin'
+[72.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.ps1'
+[72.754s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.dsv'
+[72.756s] INFO:colcon.colcon_core.shell:Creating package script '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.sh'
+[72.758s] INFO:colcon.colcon_core.shell:Creating package script '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.bash'
+[72.759s] INFO:colcon.colcon_core.shell:Creating package script '/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/dual_rviz_jazzy/package.zsh'
+[72.760s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/antoine/Documents/drones/install/dual_rviz_jazzy/share/colcon-core/packages/dual_rviz_jazzy)
+[72.761s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[72.761s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[72.762s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[72.763s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[72.784s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[72.784s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[72.784s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[72.787s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.AccessDenied: Failed to open socket: Operation not permitted
+[72.788s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[72.789s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/antoine/Documents/drones/install/local_setup.ps1'
+[72.802s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/antoine/Documents/drones/install/_local_setup_util_ps1.py'
+[72.812s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/antoine/Documents/drones/install/setup.ps1'
+[72.819s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/antoine/Documents/drones/install/local_setup.sh'
+[72.822s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/antoine/Documents/drones/install/_local_setup_util_sh.py'
+[72.831s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/antoine/Documents/drones/install/setup.sh'
+[72.835s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/antoine/Documents/drones/install/local_setup.bash'
+[72.836s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/antoine/Documents/drones/install/setup.bash'
+[72.839s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/antoine/Documents/drones/install/local_setup.zsh'
+[72.839s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/antoine/Documents/drones/install/setup.zsh'

@@ -1,0 +1,10 @@
+[0.056s] Invoking command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --build /home/antoine/Documents/drones/build/dual_rviz_jazzy -- -j8 -l8
+[0.600s] [ 50%] [32mBuilding CXX object CMakeFiles/dual_rviz.dir/src/main.cpp.o[0m
+[23.332s] [01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:[m[K In lambda function:
+[23.334s] [01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:377:31:[m[K [01;31m[Kerror: [m[K‘[01m[KmakeInfoText[m[K’ was not declared in this scope
+[23.334s]   377 |         snapshot_.info_text = [01;31m[KmakeInfoText[m[K(*msg);
+[23.334s]       |                               [01;31m[K^~~~~~~~~~~~[m[K
+[92.553s] gmake[2]: *** [CMakeFiles/dual_rviz.dir/build.make:76: CMakeFiles/dual_rviz.dir/src/main.cpp.o] Error 1
+[92.555s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dual_rviz.dir/all] Error 2
+[92.555s] gmake: *** [Makefile:146: all] Error 2
+[92.619s] Invoked command in '/home/antoine/Documents/drones/build/dual_rviz_jazzy' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/antoine/ros2_ws/install/ros_tcp_endpoint:/opt/ros/jazzy /usr/bin/cmake --build /home/antoine/Documents/drones/build/dual_rviz_jazzy -- -j8 -l8

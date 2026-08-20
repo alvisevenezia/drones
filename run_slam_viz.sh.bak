@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# =====================================================================
+#  EXECUTABLE UNIQUE — Double SLAM drone + visualisation RViz
+#  - Gazebo en HEADLESS (pas de fenetre -> economise le GPU)
+#  - VIO (rgbd_odometry) = odometrie commune camera RGB (+IMU)
+#  - Carte A : VL53 8x8 (sparse)      -> /slam_map_vl53   (orange)
+#  - Carte B : camera RGB-D (dense)   -> /rtabmap/cloud_map
+#  - RViz montre : camera du drone + position (TF) + les 2 cartes
+#
+#  Usage : ./run_slam_viz.sh
+#  La console pxh> s'affiche dans CE terminal :
+#     commander arm -f      puis    commander takeoff
+#  Vole dans l'entrepot -> les 2 cartes se construisent dans RViz.
+#  Ctrl+C (ou 'shutdown' dans pxh>) pour tout arreter.
+# =====================================================================
+set -o pipefail
+source /opt/ros/jazzy/setup.bash
+source "$HOME/ros2_ws/install/setup.bash"
+
+D="$HOME/Documents/drones"
+PIDS=()
+cleanup() {
+  echo ""
+  echo "==> Arret de tous les composants..."
+  for p in "${PIDS[@]}"; do kill "$p" 2>/dev/null; done
+  pkill -9 -f '[g]z sim' 2>/dev/null
+  pkill -9 -x px4 2>/dev/null
+  pkill -9 -f '[p]arameter_bridge' 2>/dev/null
+  pkill -9 -f '[M]icroXRCEAgent' 2>/dev/null
+}
+trap cleanup EXIT INT TERM
+
+echo "==> [1] Agent uXRCE-DDS (PX4 <-> ROS)"
+MicroXRCEAgent udp4 -p 8888 >/tmp/agent.log 2>&1 & PIDS+=($!)
+
+echo "==> [2] Pont capteurs gz -> ROS (RGB, depth, IMU, VL53)"
+bash "$D/run_camera_bridge.sh" >/tmp/cambridge.log 2>&1 & PIDS+=($!)
+
+echo "==> [3] TF statique base_link -> camera_link (optique)"
+ros2 run tf2_ros static_transform_publisher \
+  --x 0.12 --y 0 --z 0.24 --qx -0.5 --qy 0.5 --qz -0.5 --qw 0.5 \
+  --frame-id base_link --child-frame-id camera_link >/tmp/statictf.log 2>&1 & PIDS+=($!)
+
+echo "==> [4] VIO : rgbd_odometry (camera RGB-D + IMU 6 axes) -> /odom + TF"
+#ros2 run rtabmap_odom rgbd_odometry --ros-args \
+ # -p use_sim_time:=true -p frame_id:=base_link -p approx_sync:=true \
+  #-p wait_imu_to_init:=false -p publish_tf:=true \
+#  -r rgb/image:=/camera/rgb/image_raw \
+#  -r depth/image:=/camera/depth/image_raw \
+#  -r rgb/camera_info:=/camera/rgb/camera_info \
+#  -r imu:=/camera/imu >/tmp/vio.log 2>&1 &
+# --- Plan B fiable (si la VIO decroche) : commente le bloc ci-dessus, decommente : ---
+ python3 "$D/px4_odom.py" --ros-args -p use_sim_time:=true >/tmp/odom.log 2>&1 &
+
+echo "==> [5] Carte B : RTAB-Map RGB-D dense"
+ros2 run rtabmap_slam rtabmap -d --ros-args \
+  -p use_sim_time:=true \
+  -p frame_id:=base_link \
+  -p subscribe_depth:=true \
+  -p approx_sync:=true \
+  -r rgb/image:=/camera/rgb/image_raw \
+  -r depth/image:=/camera/depth/image_raw \
+  -r rgb/camera_info:=/camera/rgb/camera_info \
+  -r odom:=/odom >/tmp/rtabmap.log 2>&1 & PIDS+=($!)
+
+echo "==> [6] Carte A : mapper VL53 8x8"
+python3 "$D/slam_mapper.py" --ros-args -p use_sim_time:=true >/tmp/slam_vl53.log 2>&1 &
+
+echo "==> [7] RViz x2 : fenetre HAUT = carte VL53 + camera ; fenetre BAS = carte RTAB-Map dense"
+rviz2 -d "$D/slam.rviz" --ros-args -p use_sim_time:=true >/tmp/rviz_a.log 2>&1 &
+sleep 1
+rviz2 -d "$D/slam_cam.rviz" --ros-args -p use_sim_time:=true >/tmp/rviz_b.log 2>&1 &
+sleep 3
+echo ""
+echo "==> [8] PX4 SITL + Gazebo (headless) — console pxh> ci-dessous"
+echo "        Tape :   commander arm -f    puis    commander takeoff"
+echo ""
+cd "$HOME/PX4-Autopilot" && PX4_GZ_WORLD=tugbot_depot HEADLESS=1 make px4_sitl gz_x500_depth

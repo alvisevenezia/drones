@@ -1,0 +1,48 @@
+# Config FAST-LIO pour le VL53L9CX (leogue) + IMU, en simu Gazebo.
+# Nuage /tof/points_dense (FLU, x-avant) + IMU /camera/imu (FLU) -> extrinseque identite.
+/**:
+    ros__parameters:
+        feature_extract_enable: false
+        point_filter_num: 1
+        max_iteration: 4
+        filter_size_surf: 0.05
+        filter_size_map: 0.1
+        cube_side_length: 1000.0
+        runtime_pos_log_enable: false
+        map_file_path: "./test.pcd"
+
+        common:
+            lid_topic: "/tof/points_dense"
+            imu_topic: "/camera/imu"
+            time_sync_en: false
+            time_offset_lidar_to_imu: 0.0
+
+        preprocess:
+            lidar_type: 5            # >4 -> default_handler (nuage generique x,y,z,intensity)
+            scan_line: 42
+            scan_rate: 30
+            timestamp_unit: 2
+            blind: 0.1               # ToF utile des 0.05 m -> blind faible
+
+        mapping:
+            acc_cov: 0.1
+            gyr_cov: 0.1
+            b_acc_cov: 0.0001
+            b_gyr_cov: 0.0001
+            fov_degree: 55.0         # FoV horizontal VL53L9CX
+            det_range: 9.0           # portee max
+            extrinsic_est_en: false
+            extrinsic_T: [0.0, 0.0, 0.0]
+            extrinsic_R: [1.0, 0.0, 0.0,
+                          0.0, 1.0, 0.0,
+                          0.0, 0.0, 1.0]
+
+        publish:
+            path_en: true
+            scan_publish_en: true
+            dense_publish_en: true
+            scan_bodyframe_pub_en: true
+
+        pcd_save:
+            pcd_save_en: false
+            interval: -1

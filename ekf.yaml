@@ -1,0 +1,39 @@
+# Fusion EKF (robot_localization) : odometrie ICP (lente, sans biais) + IMU (200 Hz, rapide)
+# -> /odometry/filtered (lisse, propage par l'IMU entre les scans ICP) + TF odom->base_link.
+#
+# Idee : l'IMU predit l'etat a haute frequence (50 Hz sortie), l'ICP corrige la position/le cap.
+# -> suit les mouvements rapides (montee, virages) que l'ICP seul rate -> moins de drift dynamique.
+# (process_noise_covariance laisse par defaut : robot_localization fournit une matrice raisonnable.)
+ekf_filter_node:
+  ros__parameters:
+    frequency: 30.0
+    sensor_timeout: 0.2
+    two_d_mode: false            # drone 3D (pas 2D)
+    publish_tf: true             # l'EKF publie odom->base_link (icp_odometry ne le fait plus)
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+
+    # --- Entree 1 : odometrie ICP (position + cap, dans 'odom') ---
+    odom0: /icp_odom
+    odom0_config: [true,  true,  true,      # x, y, z          <- position ICP
+                   false, false, true,      # roll, pitch, yaw <- cap ICP
+                   false, false, false,     # vx, vy, vz
+                   false, false, false,     # vroll, vpitch, vyaw
+                   false, false, false]     # ax, ay, az
+    odom0_differential: false
+    odom0_relative: false
+    odom0_queue_size: 10
+
+    # --- Entree 2 : IMU (vitesse angulaire + acceleration, 200 Hz) ---
+    imu0: /camera/imu
+    imu0_config: [false, false, false,
+                  false, false, false,
+                  false, false, false,
+                  true,  true,  true,       # vroll, vpitch, vyaw  <- gyro SEUL
+                  false, false, false]      # ax,ay,az DESACTIVE (double integ. -> derive catastrophique)
+    imu0_differential: false
+    imu0_relative: false
+    imu0_queue_size: 50
+    imu0_remove_gravitational_acceleration: true

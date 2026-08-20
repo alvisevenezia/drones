@@ -1,0 +1,17 @@
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:[m[K In member function ‘[01m[Kvoid DualRvizWindow::[01;32m[KinitPanel[m[K(rviz_common::RenderPanel*, bool)[m[K’:
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:83:85:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   83 |     auto * grid = manager->createDisplay<rviz_default_plugins::displays::GridDisplay[01;31m[K>[m[K(
+      |                                                                                     [01;31m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:88:81:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   88 |     auto * tf = manager->createDisplay<rviz_default_plugins::displays::TFDisplay[01;31m[K>[m[K(
+      |                                                                                 [01;31m[K^[m[K
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:94:52:[m[K [01;31m[Kerror: [m[K‘[01m[KPointCloud2Display[m[K’ is not a member of ‘[01m[Krviz_default_plugins[m[K’; did you mean ‘[01m[Krviz_default_plugins::displays::PointCloud2Display[m[K’?
+   94 |       manager->createDisplay<rviz_default_plugins::[01;31m[KPointCloud2Display[m[K>(
+      |                                                    [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:22[m[K:
+[01m[K/opt/ros/jazzy/include/rviz_default_plugins/rviz_default_plugins/displays/pointcloud/point_cloud2_display.hpp:69:35:[m[K [01;36m[Knote: [m[K‘[01m[Krviz_default_plugins::displays::PointCloud2Display[m[K’ declared here
+   69 | class RVIZ_DEFAULT_PLUGINS_PUBLIC [01;36m[KPointCloud2Display[m[K : public
+      |                                   [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/dual_rviz.dir/build.make:76: CMakeFiles/dual_rviz.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dual_rviz.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

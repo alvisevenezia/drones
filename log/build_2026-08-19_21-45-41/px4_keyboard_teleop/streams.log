@@ -1,0 +1,24 @@
+[0.647s] Invoking command in '/home/antoine/Documents/drones/src/px4_keyboard_teleop': PYTHONPATH=/home/antoine/Documents/drones/build/px4_keyboard_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/antoine/Documents/drones/install/px4_keyboard_teleop/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/px4_keyboard_teleop build --build-base /home/antoine/Documents/drones/build/px4_keyboard_teleop/build install --record /home/antoine/Documents/drones/build/px4_keyboard_teleop/install.log --install-scripts $base/lib/px4_keyboard_teleop --single-version-externally-managed install_data
+[0.859s] running egg_info
+[0.875s] writing ../../build/px4_keyboard_teleop/px4_keyboard_teleop.egg-info/PKG-INFO
+[0.875s] writing dependency_links to ../../build/px4_keyboard_teleop/px4_keyboard_teleop.egg-info/dependency_links.txt
+[0.875s] writing entry points to ../../build/px4_keyboard_teleop/px4_keyboard_teleop.egg-info/entry_points.txt
+[0.875s] writing requirements to ../../build/px4_keyboard_teleop/px4_keyboard_teleop.egg-info/requires.txt
+[0.875s] writing top-level names to ../../build/px4_keyboard_teleop/px4_keyboard_teleop.egg-info/top_level.txt
+[0.907s] reading manifest file '../../build/px4_keyboard_teleop/px4_keyboard_teleop.egg-info/SOURCES.txt'
+[0.908s] writing manifest file '../../build/px4_keyboard_teleop/px4_keyboard_teleop.egg-info/SOURCES.txt'
+[0.908s] running build
+[0.908s] running build_py
+[0.908s] copying px4_keyboard_teleop/keyboard_teleop.py -> /home/antoine/Documents/drones/build/px4_keyboard_teleop/build/lib/px4_keyboard_teleop
+[0.908s] running install
+[0.914s] running install_lib
+[0.931s] copying /home/antoine/Documents/drones/build/px4_keyboard_teleop/build/lib/px4_keyboard_teleop/keyboard_teleop.py -> /home/antoine/Documents/drones/install/px4_keyboard_teleop/lib/python3.12/site-packages/px4_keyboard_teleop
+[0.931s] byte-compiling /home/antoine/Documents/drones/install/px4_keyboard_teleop/lib/python3.12/site-packages/px4_keyboard_teleop/keyboard_teleop.py to keyboard_teleop.cpython-312.pyc
+[0.933s] running install_data
+[0.933s] running install_egg_info
+[0.950s] removing '/home/antoine/Documents/drones/install/px4_keyboard_teleop/lib/python3.12/site-packages/px4_keyboard_teleop-0.0.0-py3.12.egg-info' (and everything under it)
+[0.951s] Copying ../../build/px4_keyboard_teleop/px4_keyboard_teleop.egg-info to /home/antoine/Documents/drones/install/px4_keyboard_teleop/lib/python3.12/site-packages/px4_keyboard_teleop-0.0.0-py3.12.egg-info
+[0.951s] running install_scripts
+[1.081s] Installing keyboard_teleop script to /home/antoine/Documents/drones/install/px4_keyboard_teleop/lib/px4_keyboard_teleop
+[1.081s] writing list of installed files to '/home/antoine/Documents/drones/build/px4_keyboard_teleop/install.log'
+[1.104s] Invoked command in '/home/antoine/Documents/drones/src/px4_keyboard_teleop' returned '0': PYTHONPATH=/home/antoine/Documents/drones/build/px4_keyboard_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/antoine/Documents/drones/install/px4_keyboard_teleop/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/px4_keyboard_teleop build --build-base /home/antoine/Documents/drones/build/px4_keyboard_teleop/build install --record /home/antoine/Documents/drones/build/px4_keyboard_teleop/install.log --install-scripts $base/lib/px4_keyboard_teleop --single-version-externally-managed install_data

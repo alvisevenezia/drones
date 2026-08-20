@@ -1,0 +1,8 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/dual_rviz.dir/src/main.cpp.o[0m
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:[m[K In lambda function:
+[01m[K/home/antoine/Documents/drones/dual_rviz_jazzy/src/main.cpp:377:31:[m[K [01;31m[Kerror: [m[K‘[01m[KmakeInfoText[m[K’ was not declared in this scope
+  377 |         snapshot_.info_text = [01;31m[KmakeInfoText[m[K(*msg);
+      |                               [01;31m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/dual_rviz.dir/build.make:76: CMakeFiles/dual_rviz.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/dual_rviz.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
