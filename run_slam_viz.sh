@@ -17,7 +17,9 @@ set -o pipefail
 source /opt/ros/jazzy/setup.bash
 source "$HOME/ros2_ws/install/setup.bash"
 
-D="$HOME/Documents/drones"
+D="${D:-$HOME/Documents/drones}"
+PX4_HOME="${PX4_HOME:-$D/PX4-Autopilot}"
+
 source "$D/install/setup.bash"
 PIDS=()
 cleanup() {
