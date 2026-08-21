@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.6.3-devel-ubuntu24.04
+FROM nvidia/cuda:12.6.3-runtime-ubuntu24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Brussels
@@ -82,6 +82,7 @@ RUN apt-get update && apt-get install -y \
     ros-jazzy-ros2-controllers \
     ros-jazzy-ros-gz \
     ros-dev-tools \
+    ros-jazzy-rtabmap-ros \
     && rm -rf /var/lib/apt/lists/*
 
 # ============================================================

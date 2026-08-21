@@ -36,7 +36,32 @@ PX4_HOME="${PX4_HOME:-$D/PX4-Autopilot}"
 WORLD="${PX4_GZ_WORLD:-tugbot_depot}"
 MODEL="${PX4_SIM_MODEL:-gz_x500_depth}"
 
-HEADLESS="${HEADLESS:-0}"
+# ---------------------------------------------------------------------
+# Mode GUI / HEADLESS
+#
+# Priorité :
+#   HEADLESS=0  -> force GUI
+#   HEADLESS=1  -> force headless
+#   HEADLESS non défini -> détection automatique
+# ---------------------------------------------------------------------
+
+if [ -z "${HEADLESS+x}" ]; then
+
+    if [ -z "${DISPLAY:-}" ] && [ -z "${WAYLAND_DISPLAY:-}" ]; then
+        HEADLESS=1
+    else
+        HEADLESS=0
+    fi
+
+fi
+
+LOG_DIR="/tmp/drone_logs"
+mkdir -p "$LOG_DIR"
+
+MAIN_LOG="$LOG_DIR/simulation.log"
+
+# Vide le log à chaque démarrage
+: > "$MAIN_LOG"
 
 PIDS=()
 
@@ -72,6 +97,27 @@ if [ "$HEADLESS" != "1" ]; then
     export LIBGL_ALWAYS_SOFTWARE=1
     export MESA_LOADER_DRIVER_OVERRIDE=llvmpipe
 fi
+
+# ---------------------------------------------------------------------
+# Logging
+# ---------------------------------------------------------------------
+
+start_logged() {
+    local name="$1"
+    local logfile="$LOG_DIR/$2"
+    shift 2
+
+    (
+        "$@"
+    ) 2>&1 \
+        | stdbuf -oL -eL \
+        | sed -u "s/^/[$name] /" \
+        | tee -a "$MAIN_LOG" \
+        | tee "$logfile" \
+        >/dev/null &
+
+    PIDS+=("$!")
+}
 
 # ---------------------------------------------------------------------
 # Cleanup
@@ -240,15 +286,24 @@ mkfifo "$PX4_STDIN_FIFO"
 if [ "$HEADLESS" = "1" ]; then
 
     echo "    Mode : HEADLESS"
+    echo "    Gazebo GUI : désactivé"
+    echo "    RViz/Qt    : désactivé"
 
     (
         PX4_GZ_WORLD="$WORLD" \
         PX4_SIM_MODEL="$MODEL" \
+        PX4_GZ_SIM_RENDER_ENGINE=ogre2 \
+        PX4_GZ_STANDALONE=0 \
         HEADLESS=1 \
         make px4_sitl gz_x500_depth \
             < "$PX4_STDIN_FIFO" \
-            2>&1
-    ) > /tmp/px4.log &
+            2>&1\
+              | stdbuf -oL -eL \
+              | tee "$LOG_DIR/px4.log" \
+              | tee -a "$MAIN_LOG" \
+            >/dev/null &
+    ) > >(tee -a /tmp/px4.log) 2>&1 &
+
 
 else
 
@@ -276,14 +331,6 @@ echo "    PX4 PID : $PX4_PID"
 # ---------------------------------------------------------------------
 
 exec 9>"$PX4_STDIN_FIFO"
-
-# ---------------------------------------------------------------------
-# Affichage des logs PX4 pendant le démarrage.
-# ---------------------------------------------------------------------
-
-tail -f /tmp/px4.log &
-LOG_PID=$!
-PIDS+=("$LOG_PID")
 
 # =====================================================================
 # 3 — Attente PX4 / Gazebo
@@ -350,18 +397,34 @@ echo "============================================================"
 bash "$D/run_camera_bridge.sh" \
     >/tmp/cambridge.log 2>&1 &
 
-PIDS+=($!)
+CAMERA_BRIDGE_PID=$!
+PIDS+=("$CAMERA_BRIDGE_PID")
 
 sleep 3
 
-echo "    Camera bridge démarré."
+if ! kill -0 "$CAMERA_BRIDGE_PID" 2>/dev/null; then
+    echo ""
+    echo "ERROR : Camera bridge arrêté immédiatement."
+    echo ""
+    echo "===== /tmp/cambridge.log ====="
+    cat /tmp/cambridge.log
+    echo "================================"
+    exit 1
+fi
+
+echo "    Camera bridge actif (PID $CAMERA_BRIDGE_PID)."
 
 echo ""
-echo "    Topics capteurs :"
-
+echo "    Topics ROS capteurs :"
 ros2 topic list | grep -E \
     '/camera|/tof|/vl53|/imu' \
-    || true
+    || {
+        echo "WARNING : aucun topic capteur ROS détecté."
+        echo ""
+        echo "===== /tmp/cambridge.log ====="
+        cat /tmp/cambridge.log
+        echo "================================"
+    }
 
 # =====================================================================
 # 6 — Monitoring
@@ -484,7 +547,8 @@ echo "============================================================"
 echo " [11] ICP Odometry ToF + IMU"
 echo "============================================================"
 
-ros2 run rtabmap_odom icp_odometry \
+start_logged "ICP" "icp.log" \
+    ros2 run rtabmap_odom icp_odometry \
     --ros-args \
     -p use_sim_time:=true \
     -p frame_id:=base_link \
@@ -519,7 +583,9 @@ echo "============================================================"
 echo " [12] RTAB-Map"
 echo "============================================================"
 
-ros2 run rtabmap_slam rtabmap -d \
+
+start_logged "RTABMAP" "rtabmap.log" \
+    ros2 run rtabmap_slam rtabmap -d \
     --ros-args \
     -p use_sim_time:=true \
     -p frame_id:=base_link \
@@ -557,7 +623,8 @@ echo "============================================================"
 echo " [13] SLAM ToF"
 echo "============================================================"
 
-python3 "$D/slam_mapper.py" \
+start_logged "SLAM_TOF" "slam_tof.log" \
+    python3 "$D/slam_mapper.py" \
     --ros-args \
     -p use_sim_time:=true \
     >/tmp/slam_vl53.log 2>&1 &
@@ -692,26 +759,6 @@ echo ""
 echo "============================================================"
 echo ""
 
-# ---------------------------------------------------------------------
-# Stopper le tail qui affichait les logs de démarrage.
-# ---------------------------------------------------------------------
-
-kill "$LOG_PID" 2>/dev/null || true
-
-# ---------------------------------------------------------------------
-# Console interactive :
-#
-# stdin du terminal -> FIFO -> PX4
-#
-# stdout/stderr PX4 -> /tmp/px4.log
-# et on l'affiche ici en direct.
-#
-# ---------------------------------------------------------------------
-
-tail -f /tmp/px4.log &
-PX4_TAIL_PID=$!
-
-PIDS+=("$PX4_TAIL_PID")
 
 # ---------------------------------------------------------------------
 # Lire les commandes utilisateur et les envoyer à PX4.
