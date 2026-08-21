@@ -109,10 +109,10 @@ class RuntimeMonitor(Node):
         current_wall = time.monotonic()
         current_sim = float(msg.clock.sec) + float(msg.clock.nanosec) / 1_000_000_000.0
         if self.last_clock_wall is not None and self.last_clock_sim is not None:
-                        wall_delta = current_wall - self.last_clock_wall
-                        sim_delta = current_sim - self.last_clock_sim
-                        if wall_delta > 0.0 and sim_delta >= 0.0:
-              self.last_rtf = sim_delta / wall_delta
+            wall_delta = current_wall - self.last_clock_wall
+            sim_delta = current_sim - self.last_clock_sim
+            if wall_delta > 0.0 and sim_delta >= 0.0:
+                self.last_rtf = sim_delta / wall_delta
         self.last_clock_wall = current_wall
         self.last_clock_sim = current_sim
 
